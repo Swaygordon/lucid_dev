@@ -1,16 +1,12 @@
-import Navbar from "../components/Navbar/navbar";
+import Section1 from "./home_sections.jsx";
 import BackgroundImage from "../assets/background.png"
 
 function Home() {
   return (
     <>
     <div className="flex flex-col min-h-screen bg-gray-300">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Hero fills the remaining height */}
       <div
-        className="hero flex-1 w-full mt-1.5"
+        className="hero flex-1 w-full"
         style={{
           backgroundImage:
            `url(${BackgroundImage})`,
@@ -19,7 +15,7 @@ function Home() {
         }}
       >
         <div className="hero-overlay bg-transparent"></div>
-         <div className="hero-content text-neutral-content text-center">
+         <div className="hero-content min-w-40 text-neutral-content text-center">
           <div className="max-w-3.5xl px-2.5">
             {/* Heading */}
             <h1 className="text-5xl md:text-6xl font-extrabold text-black leading-tight mb-6">
@@ -37,7 +33,7 @@ function Home() {
 
             {/* Search Bar */}
       <div className="mt-12 flex justify-center">
-        <div className="flex w-full max-w-lg lg:mb-10 rounded-full shadow-lg overflow-hidden bg-white border-2 border-blue-700">
+        <div className="flex w-full max-w-2xl lg:mb-10 rounded-full shadow-lg overflow-hidden bg-white border-2 border-blue-700">
     <input
       type="text"
       placeholder="What service do you need?"
@@ -88,7 +84,7 @@ function Home() {
       </div>
       {/* Category Buttons end */}
     </div>
-    
+    <Section1/>
     </>
   );
 }
